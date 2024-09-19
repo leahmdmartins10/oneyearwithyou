@@ -1,0 +1,79 @@
+h1 {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 75px;
+    color: #aaaaaa;
+    margin: 60px 0 0 0;
+}
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Main timeline */
+.timeline {
+    position: relative;
+    width: 80%;
+    height: 5px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* Timeline points */
+.timeline-point {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #2196F3;
+    border-radius: 50%;
+    top: -5px;
+    cursor: pointer;
+}
+
+.timeline-point:nth-child(1) {
+    left: 10%;
+}
+
+.timeline-point:nth-child(2) {
+    left: 30%;
+}
+
+.timeline-point:nth-child(3) {
+    left: 50%;
+}
+
+.timeline-point:nth-child(4) {
+    left: 70%;
+}
+
+/* Popup content */
+.popup-content {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* Show popup when hovering */
+.timeline-point:hover .popup-content {
+    display: block;
+}
