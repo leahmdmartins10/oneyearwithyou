@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     points.forEach((point, index) => {
         // Adjust calculation to prevent clipping of the last point
-        const position = (index / (numberOfPoints - 1)) * (100 - 5); // Subtract 5% to avoid clipping
+        const position = (index / (numberOfPoints - 1)) * (100 - 10); // Subtract 20% to avoid clipping
         point.style.left = `${position}%`;
     });
 });
