@@ -2,7 +2,7 @@ h1 {
     font-family:'Times New Roman', Times, serif;
     text-align: center;
     font-size: 75px;
-    color: #aaaaaa;
+    color: #000000;
     margin: 60px 0 0 0;
 }
 h2{
@@ -18,7 +18,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    overflow-x: hidden;
+    background-color: #FFDFD3;
 }
 
 /* Main timeline */
@@ -39,26 +40,6 @@ body {
     border-radius: 50%;
     top: -5px;
     cursor: pointer;
-}
-
-.timeline-point:nth-child(1) {
-    left: 10%;
-}
-
-.timeline-point:nth-child(2) {
-    left: 30%;
-}
-
-.timeline-point:nth-child(3) {
-    left: 50%;
-}
-
-.timeline-point:nth-child(4) {
-    left: 70%;
-}
-
-.timeline-point:nth-child(5) {
-    left: 90%;
 }
 
 /* Popup content */
