@@ -40,8 +40,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: #FFDFD3; */
-    background: url("https://github.com/leahmdmartins10/oneyearwithyou/blob/main/docs/scotlandland.jpeg");
+    background-color: #FFDFD3;
 }
 
 /* Main timeline */
