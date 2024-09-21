@@ -17,7 +17,21 @@ document.addEventListener('DOMContentLoaded', function() {
             // Only calculate and set the `top` position if it's not already set
             if (!popup.style.top || popup.style.top === 'auto') {
                 const popupHeight = popup.offsetHeight;
+                const popupWidth = popup.offsetWidth;
                 popup.style.top = `-${popupHeight + 10}px`; // Position the popup above
+            }
+
+            // adjusting the pop up if it's too far to the side of the screen
+            const popupRect = popup.getBoundingClientRect();
+            if (popupRect.right >= window.innerWidth) {
+                popup.style.transform = 'none'; // Disable centering if near edge
+                popup.style.left = `${window.innerWidth - popupWidth - 1000}px`;
+            }
+
+            // Adjust pop-up if it's too close to the left edge of the screen
+            if (popupRect.left < 0) {
+                popup.style.left = '20px';
+                popup.style.transform = 'none'; // Disable centering if near edge
             }
             popup.style.display = 'block'; // Show the popup
         });
