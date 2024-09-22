@@ -8,7 +8,7 @@ h1 {
 }
 
 /* Styling the header-timeline-container */
-.header-timeline-container {
+.timeline-container-one{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,10 +29,16 @@ h2 {
 /* Style for h3 */
 h3 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 45px; /* Smaller size for better alignment */
+    font-size: 15px; /* Smaller size for better alignment */
     text-align: right;
     color: #000000;
     margin-top: 20px;
+    border: 2px solid #000; /* Change color and thickness as needed */
+    padding: 10px;          /* Space between the text and the border */
+    background-color: #f9f9f9; /* Optional: a light background color */
+    border-radius: 5px;    /* Optional: rounded corners */
+    width: fit-content;     /* Optional: adjusts width to content */
+    margin: 10px 0;        /* Optional: adds space around the block */
 }
 
 /* Main body styling */
@@ -62,6 +68,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: -50px;
 }
 
 /* Timeline points */
