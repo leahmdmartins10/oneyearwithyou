@@ -24,8 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // adjusting the pop up if it's too far to the side of the screen
             const popupRect = popup.getBoundingClientRect();
             if (popupRect.right >= window.innerWidth) {
+                const popupWidth = popup.offsetWidth;
+                popup.style.left = `-${window.innerWidth - popupWidth - 1050}px`;
                 popup.style.transform = 'none'; // Disable centering if near edge
-                popup.style.left = `${window.innerWidth - popupWidth - 1000}px`;
             }
 
             // Adjust pop-up if it's too close to the left edge of the screen

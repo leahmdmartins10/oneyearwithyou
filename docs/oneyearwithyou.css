@@ -1,18 +1,20 @@
-.header-timeline-container {
-    display: flex;
-    justify-content: space-around; /* Adjust spacing */
-    align-items: center; /* Vertically center elements */
-    width: 95%; /* Ensure it spans full width */
-    margin-bottom: 20px; /* Add some space below the container */
-    margin-top: -250px; /* Move it up */
-}
-
 /* Style for h1 */
 h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 75px;
     color: #000000;
-    margin: 20px 20px 0 0; /* Spacing between h1 and h2 */
+    margin-top: 50px; /* Adjusted spacing for better alignment */
+    text-align: center;
+}
+
+/* Styling the header-timeline-container */
+.header-timeline-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    margin-top: 30px; /* Adjust the margin to move it up */
+    margin-bottom: 40px;
 }
 
 /* Style for h2 */
@@ -20,16 +22,17 @@ h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
     color: #000000;
-    margin: 20px 20px 0 0; /* Spacing between h2 and the timeline */
+    margin-bottom: 40px; /* Space between h2 and the timeline */
+    text-align: center;
 }
 
-/* Style for h3 (it will be placed below the header-timeline-container) */
+/* Style for h3 */
 h3 {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 45px; /* Smaller size for better alignment */
     text-align: right;
-    font-size: 75px;
-    margin-top: 20px;
     color: #000000;
+    margin-top: 20px;
 }
 
 /* Main body styling */
@@ -38,33 +41,36 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;  /* Stack everything vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('stardew.jpg'); /* Replace with your image path */
-    background-size: cover; /* Makes the image cover the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('stardew.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
 }
 
 /* Main timeline */
 .timeline {
     position: relative;
-    width: 100%;
+    width: 90%; /* Slightly reduced for better centering */
     height: 5px;
     background-color: #B3CDE6;
-    margin-top: 20px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Timeline points */
 .timeline-point {
-    position: absolute;
+    position: relative;
     width: 15px;
     height: 15px;
     background-color: #A8D3B7;
     border-radius: 50%;
-    top: -5px;
     cursor: pointer;
 }
 
@@ -72,7 +78,7 @@ body {
 .popup-content {
     display: none;
     position: absolute;
-    left: 20%;
+    left: 50%; /* Adjusted to be centered relative to the point */
     transform: translateX(-50%);
     background-color: #fff;
     padding: 10px;
@@ -82,19 +88,47 @@ body {
     white-space: nowrap;
     font-size: 14px;
     z-index: 100;
-    max-width: fit-content;
+    width: auto;
+    max-width: 300px; /* Limit max width for popups */
 }
 
+/* Styling for popup images */
 .popup-content img {
     display: block;
-    margin: 10px auto; /* Center the image */
-    width: 100px; /* Adjust width */
-    height: auto; /* Keep aspect ratio */
-    border-radius: 5px; /* Optional: add rounded corners */
+    margin: 10px auto;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
 }
-
 
 /* Show popup when hovering */
 .timeline-point:hover .popup-content {
     display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .header-timeline-container {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: flex-start;
+    }
+
+    .timeline {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .popup-content {
+        left: auto;
+        transform: none;
+        max-width: 250px;
+    }
 }
