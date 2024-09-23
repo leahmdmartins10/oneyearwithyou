@@ -21,7 +21,7 @@ h1 {
 h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 25px;
-    color: #000000;
+    color: #E1D7FB;
     margin-bottom: 40px; /* Space between h2 and the timeline */
     text-align: center;
 }
@@ -33,9 +33,9 @@ h3 {
     text-align: right;
     color: #000000;
     margin-top: 20px;
-    border: 2px solid #000; /* Change color and thickness as needed */
+    border: 2px solid #BDACBD; /* Change color and thickness as needed */
     padding: 10px;          /* Space between the text and the border */
-    background-color: #f9f9f9; /* Optional: a light background color */
+    background-color: #F1D0CD; /* Optional: a light background color */
     border-radius: 5px;    /* Optional: rounded corners */
     width: fit-content;     /* Optional: adjusts width to content */
     margin: 10px 0;        /* Optional: adds space around the block */
