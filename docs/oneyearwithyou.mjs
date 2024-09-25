@@ -43,3 +43,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+let currentIndex = { 'carousel-one': 0, 'carousel-two': 0 }; // Store current index for each carousel
+
+function showSlide(index, carouselId) {
+    const slides = document.querySelectorAll(`#${carouselId} .carousel-images img`);
+    const totalSlides = slides.length;
+
+    // Wrap around the index
+    if (index >= totalSlides) {
+        index = 0;
+    } else if (index < 0) {
+        index = totalSlides - 1;
+    }
+
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+    });
+
+    // Update the active index
+    currentIndex[carouselId] = index;
+
+    return index; // Return the updated index
+}
+
+function moveSlide(step, carouselId) {
+    const newIndex = currentIndex[carouselId] + step; // Update the index based on step
+    showSlide(newIndex, carouselId); // Show the new slide
+}
+
+// Initialize the first slide for each carousel
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const images = carousel.querySelectorAll('.carousel-images img');
+    images.forEach((img, index) => {
+        img.style.display = index === 0 ? 'block' : 'none'; // Show only the first image
+    });
+});
