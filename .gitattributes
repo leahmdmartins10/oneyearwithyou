@@ -1,3 +1,6 @@
+may17to20[[:space:]]vlog.mp4 filter=lfs diff=lfs merge=lfs -text
+scotlandvlog.mp4 filter=lfs diff=lfs merge=lfs -text
+may17to20vlog.mp4 filter=lfs diff=lfs merge=lfs -text
 *.DS_Store filter=lfs diff=lfs merge=lfs -text
 *.md filter=lfs diff=lfs merge=lfs -text
 *.jpeg filter=lfs diff=lfs merge=lfs -text
