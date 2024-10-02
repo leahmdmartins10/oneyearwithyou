@@ -41,6 +41,28 @@ h3 {
     margin: 10px 0;        /* Optional: adds space around the block */
 }
 
+header {
+    background: #35424a; /* Dark header background */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding for header */
+    text-align: center; /* Center the text */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Align list items horizontally */
+    margin: 0 15px; /* Spacing between items */
+}
+
+nav ul li a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+}
+
 /* Main body styling */
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -190,22 +212,27 @@ button {
 }
 
 .video-container {
-    display: flex; /* Use Flexbox to align items horizontally */
-    justify-content: space-between; /* Space items evenly */
-    align-items: flex-start; /* Align items to the start */
+    display: flex; /* Use Flexbox to arrange videos side by side */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center them vertically */
     margin: 20px; /* Optional margin for spacing */
+    padding: 10px; /* Padding inside the box */
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Style for individual videos */
+video {
+    max-width: 100%; /* Make videos responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for videos */
 }
 
 .video-wrapper {
     flex: 1; /* Make each video take equal space */
     margin: 10px; /* Margin between videos */
     max-width: 500px; /* Limit the maximum width */
-}
-
-
-video{ /* Make the video responsive */
-    width: 100%; /* Make the video responsive */
-    height: auto; /* Maintain aspect ratio */
 }
 
 
