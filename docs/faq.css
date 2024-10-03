@@ -1,7 +1,6 @@
 /* FAQ Page Styles */
 /* Ensure the body and html take up the full height of the viewport */
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -72,8 +71,9 @@ nav ul li a:hover {
 
 /* FAQ container */
 .faq-container {
-    width: 80%;
-    margin: 40px auto;
+    width: 80%; /* Overall container width */
+    max-width: 800px; /* Set a maximum width for the FAQ container */
+    margin: 40px auto; /* Center the container */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -81,10 +81,15 @@ nav ul li a:hover {
 }
 
 /* Question styling */
-.faq-container h2 {
-    font-size: 36px;
-    color: #35424a;
-    margin-bottom: 30px;
+.faq-section {
+    display: flex;
+    flex-direction: column; /* Stack FAQ items vertically */
+    gap: 20px; /* Adds space between FAQ items */
+}
+
+.faq-item {
+    width: auto; /* Allow the item to adjust based on content */
+    margin: 0 auto; /* Center align the FAQ items */
 }
 
 .faq-question {
@@ -95,8 +100,12 @@ nav ul li a:hover {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: inline-block; /* Allow the button to only take as much width as needed */
+    box-sizing: border-box; /* Include padding and border in width */
+    text-align: left; /* Align text to the left */
 }
 
+/* Hover effect for question */
 .faq-question:hover {
     background-color: #ddd;
 }
@@ -106,12 +115,27 @@ nav ul li a:hover {
     max-height: 0; /* Initially hide the answer */
     overflow: hidden; /* Hide overflow */
     transition: max-height 0.3s ease; /* Smooth transition */
+    margin: 10px 0; /* Adds space between the question and answer */
 }
 
-
 .faq-answer p {
-    margin: 0;
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding inside the box */
+    border: 1px solid #ccc; /* Border around the paragraph */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in total width/height */
+    display: inline-block; /* Set to inline-block to fit the width of the question */
+    width: auto; /* Remove width setting to allow it to fit the content */
+}
 
+/* Optional: Change background on hover for interactivity */
+.faq-answer p:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change to solid white on hover */
+}
+
+.faq-question.active + .faq-answer {
+    max-height: 200px; /* Adjust this as needed for your answer length */
 }
 
 /* Responsive adjustments */
