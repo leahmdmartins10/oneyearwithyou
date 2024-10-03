@@ -1,135 +1,113 @@
-/* Style for h1 */
-h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 75px;
-    color: #000000;
-    margin-top: 50px; /* Adjusted spacing for better alignment */
-    text-align: center;
-}
-
-/* Styling the header-timeline-container */
-.timeline-container-one{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 95%;
-    margin-top: 30px; /* Adjust the margin to move it up */
-    margin-bottom: 40px;
-}
-
-/* Style for h2 */
-h2 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 45px;
-    color: #fbd7f8;
-    margin-bottom: 5px; /* Space between h2 and the timeline */
-    text-align: center;
-}
-
-/* Style for h3 */
-h3 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 15px; /* Smaller size for better alignment */
-    text-align: right;
-    color: #000000;
-    margin-top: 20px;
-    border: 2px solid #BDACBD; /* Change color and thickness as needed */
-    padding: 10px;          /* Space between the text and the border */
-    background-color: #F1D0CD; /* Optional: a light background color */
-    border-radius: 5px;    /* Optional: rounded corners */
-    width: fit-content;     /* Optional: adjusts width to content */
-    margin: 10px 0;        /* Optional: adds space around the block */
-}
-
-/* Styling for the header */
-header {
-    background: rgba(53, 66, 74, 0.5); /* Dark background with 80% opacity */
-    color: #ffffff; /* White text color */
-    padding: 20px 0; /* Padding for header */
-    text-align: center; /* Center the text */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
-    position: relative; /* Makes the header fixed */
-    width: 100%; /* Full width of the page */
-}
-
-/* Navigation styling */
-nav {
-    display: flex;
-    justify-content: center; /* Center the nav */
-    align-items: center;
-    margin-top: 10px; /* Space between nav and header text */
-}
-
-/* Styling the unordered list */
-nav ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-}
-
-/* Styling individual list items */
-nav ul li {
-    display: inline-block; /* Align list items horizontally */
-    margin: 0 20px; /* Space between items */
-    position: relative; /* To allow dropdown effect (if needed later) */
-}
-
-/* Link styling */
-nav ul li a {
-    color: #ffffff; /* White text for links */
-    font-size: 18px; /* Larger font size */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 20px; /* Padding for clickable area */
-    background-color: transparent; /* Transparent background initially */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-}
-
-/* Hover effects for links */
-nav ul li a:hover {
-    background-color: #fbd7f8; /* Soft pink background on hover */
-    color: #333; /* Darker text on hover */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
-}
-
-/* Active link (optional) */
-nav ul li a.active {
-    background-color: #fbd7f8; /* Make the active page visually distinct */
-    color: #333;
-}
-
-
-/* Main body styling */
+/* Global Styles */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: auto;
-    background-image: url('stardew.jpg'); /* Replace with your image */
+    background-image: url('stardew.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #333;
 }
 
-/* Main timeline */
+/* Headers */
+h1 {
+    font-size: 75px;
+    color: #000;
+    margin-top: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+    color: #fbd7f8;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 15px;
+    text-align: right;
+    color: #000;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #F1D0CD;
+    border: 2px solid #BDACBD;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px 0;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(53, 66, 74, 0.5);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #fbd7f8;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a.active {
+    background-color: #fbd7f8;
+    color: #333;
+}
+
+/* Timeline Styles */
+.timeline-container-one {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    margin: 30px 0 40px;
+}
+
 .timeline {
     position: relative;
-    width: 80%; /* Slightly reduced for better centering */
+    width: 80%;
     height: 5px;
     background-color: #B3CDE6;
-    margin: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: -50px;
+    margin: 20px 0 -50px;
 }
 
-/* Timeline points */
 .timeline-point {
     position: absolute;
     width: 15px;
@@ -139,11 +117,10 @@ body {
     cursor: pointer;
 }
 
-/* Popup content */
 .popup-content {
     display: none;
     position: absolute;
-    left: 50%; /* Adjusted to be centered relative to the point */
+    left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
     padding: 10px;
@@ -153,11 +130,9 @@ body {
     white-space: nowrap;
     font-size: 14px;
     z-index: 100;
-    width: auto;
-    max-width: 500px; /* Limit max width for popups */
+    max-width: 500px;
 }
 
-/* Styling for popup images */
 .popup-content img {
     display: block;
     margin: 10px auto;
@@ -166,31 +141,23 @@ body {
     border-radius: 5px;
 }
 
-/* Show popup when hovering */
 .timeline-point:hover .popup-content {
     display: block;
 }
 
+/* Carousel Styles */
 .carousel-container {
-    display: flex; /* Use Flexbox to arrange children in a row */
-    justify-content: space-between; /* Space them evenly */
-    align-items: center; /* Center them vertically */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carousel {
-    flex: 1; /* Allow carousels to take equal space */
-    margin: 0 10px; /* Add some spacing between the carousels */
-    max-width: 500px; /* Optional: limit the width of each carousel */
-    position: relative; /* Required for positioning buttons */
-}
-
-.carousel {
-    position: relative;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    margin-left: 20px;
     flex: 1;
+    margin: 0 10px;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-images {
@@ -204,30 +171,24 @@ body {
     display: none;
     padding-bottom: 50px;
     border-radius: 25px;
-    width: 300px; /* Set a specific width */
-    height: 450px; /* Set a specific height */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
+    width: 300px;
+    object-fit: cover;
 }
 
 .carousel-images img.active {
     display: block;
-    max-width: 300px;
 }
 
 .carousel-text {
     position: absolute;
-    bottom: 10px; /* Position it above the bottom */
+    bottom: 10px;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white; /* Text color */
-    text-align: right; /* Center the text */
-    padding: 10px; /* Add some padding */
-    border-radius: 0 0 15px 15px; /* Round the bottom corners */
-}
-
-#carousel-two .carousel-text{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     text-align: right;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
 }
 
 button {
@@ -247,30 +208,29 @@ button {
     right: 10px;
 }
 
+/* Video Styles */
 .video-container {
-    display: flex; /* Use Flexbox to arrange videos side by side */
-    justify-content: space-around; /* Space items evenly */
-    align-items: center; /* Center them vertically */
-    margin: 20px; /* Optional margin for spacing */
-    padding: 10px; /* Padding inside the box */
-    border-radius: 15px; /* Rounded corners */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background with opacity */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for individual videos */
 video {
-    max-width: 100%; /* Make videos responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for videos */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .video-wrapper {
-    flex: 1; /* Make each video take equal space */
-    margin: 10px; /* Margin between videos */
-    max-width: 500px; /* Limit the maximum width */
+    flex: 1;
+    margin: 10px;
+    max-width: 500px;
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -283,23 +243,17 @@ video {
     }
 
     .header-timeline-container {
-        flex-direction: column; /* Stack the elements vertically */
+        flex-direction: column;
         align-items: flex-start;
     }
 
     .timeline {
         width: 100%;
-        justify-content: space-around;
     }
 
-    .popup-content {
-        left: auto;
-        transform: none;
-        max-width: 768px;
-    }
     nav ul li {
-        display: block; /* Stack items vertically on small screens */
+        display: block;
         text-align: center;
-        margin: 10px 0; /* Add margin between items */
+        margin: 10px 0;
     }
 }

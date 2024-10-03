@@ -1,0 +1,134 @@
+/* FAQ Page Styles */
+/* Ensure the body and html take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content area */
+main {
+    flex: 1; /* This allows the main content to take up remaining space */
+}
+
+/* Footer styles */
+footer {
+    background-color: #35424a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Ensures the footer is pushed to the bottom */
+}
+
+/* General page styling */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    background-image: url(stardewgif.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header styling */
+header {
+    background-color: #35424a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ container */
+.faq-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Question styling */
+.faq-container h2 {
+    font-size: 36px;
+    color: #35424a;
+    margin-bottom: 30px;
+}
+
+.faq-question {
+    font-size: 24px;
+    margin: 15px 0;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #ddd;
+}
+
+/* Answer styling */
+.faq-answer {
+    max-height: 0; /* Initially hide the answer */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+
+.faq-answer p {
+    margin: 0;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    .faq-container h2 {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 20px;
+    }
+
+    .faq-answer {
+        font-size: 16px;
+    }
+}
