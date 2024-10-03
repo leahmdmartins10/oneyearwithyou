@@ -41,27 +41,63 @@ h3 {
     margin: 10px 0;        /* Optional: adds space around the block */
 }
 
+/* Styling for the header */
 header {
-    background: #35424a; /* Dark header background */
+    background: rgba(53, 66, 74, 0.5); /* Dark background with 80% opacity */
     color: #ffffff; /* White text color */
     padding: 20px 0; /* Padding for header */
     text-align: center; /* Center the text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    position: relative; /* Makes the header fixed */
+    width: 100%; /* Full width of the page */
 }
 
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav */
+    align-items: center;
+    margin-top: 10px; /* Space between nav and header text */
+}
+
+/* Styling the unordered list */
 nav ul {
-    list-style: none; /* Remove bullet points from list */
+    list-style: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
 }
 
+/* Styling individual list items */
 nav ul li {
-    display: inline; /* Align list items horizontally */
-    margin: 0 15px; /* Spacing between items */
+    display: inline-block; /* Align list items horizontally */
+    margin: 0 20px; /* Space between items */
+    position: relative; /* To allow dropdown effect (if needed later) */
 }
 
+/* Link styling */
 nav ul li a {
     color: #ffffff; /* White text for links */
+    font-size: 18px; /* Larger font size */
     text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding for clickable area */
+    background-color: transparent; /* Transparent background initially */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
+
+/* Hover effects for links */
+nav ul li a:hover {
+    background-color: #fbd7f8; /* Soft pink background on hover */
+    color: #333; /* Darker text on hover */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Active link (optional) */
+nav ul li a.active {
+    background-color: #fbd7f8; /* Make the active page visually distinct */
+    color: #333;
+}
+
 
 /* Main body styling */
 body {
@@ -260,5 +296,10 @@ video {
         left: auto;
         transform: none;
         max-width: 768px;
+    }
+    nav ul li {
+        display: block; /* Stack items vertically on small screens */
+        text-align: center;
+        margin: 10px 0; /* Add margin between items */
     }
 }
