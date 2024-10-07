@@ -232,6 +232,23 @@ video {
     max-width: 500px;
 }
 
+.playlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1500px; /* Adjust based on your preference */
+}
+
+.playlist-container iframe {
+    flex: 1 1 300px;
+    max-width: 300px; /* Ensures each playlist stays at a reasonable size */
+    border: 2px solid #ccc; /* Optional: Add a border to the playlists */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     h1 {
