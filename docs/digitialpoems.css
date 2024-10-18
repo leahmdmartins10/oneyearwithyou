@@ -1,0 +1,86 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the book scans */
+  .book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .book-scan {
+    max-width: 100%;
+    max-height: 80vh;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-scan:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Add pagination if there are multiple pages */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .pagination a {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .book-scan {
+      max-width: 90%;
+      max-height: 60vh;
+    }
+  
+    .pagination a {
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Add footer for credits or navigation */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }

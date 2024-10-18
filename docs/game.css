@@ -80,6 +80,16 @@ h2 {
     margin: 20px auto; /* Center the heading and add vertical margin */
     max-width: 600px; /* Maximum width for the heading */
 }
+p {
+    font-size: 18px; /* Font size for the paragraph */
+    color: #35424a; /* Color for the paragraph text */
+    padding: 10px; /* Padding inside the paragraph */
+    border: 2px solid #35424a; /* Border around the paragraph */
+    border-radius: 8px; /* Rounded corners for the border */
+    background-color: #e0f7fa; /* Light background color for contrast */
+    margin: 20px auto; /* Center the paragraph and add vertical margin */
+    max-width: 600px; /* Maximum width for the paragraph */
+}
 
 /* Overall Shopping Container */
 .shopping-container {
